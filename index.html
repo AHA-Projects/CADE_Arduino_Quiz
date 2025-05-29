@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Arduino Code Sequencer Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 align="center">Arduino Code Block Sequencer</h1>
+    <p>Drag the Arduino concepts from the left and drop them into the correct sequence on the right.</p>
+
+    <div id="quizContainer">
+
+        <div id="conceptsSourceContainer">
+            <h2>Code Concepts</h2>
+            <ul id="draggableConceptsList">
+                <li id="item-c1" data-concept-id="c1" draggable="true">Include Libraries</li>
+                <li id="item-c2" data-concept-id="c2" draggable="true">Define Global Variables & Constants</li>
+                <li id="item-c3" data-concept-id="c3" draggable="true">Initialize Hardware & Settings</li>
+                <li id="item-c4" data-concept-id="c4" draggable="true">Read Inputs & Sensors</li>
+                <li id="item-c5" data-concept-id="c5" draggable="true">Control Outputs & Logic</li>
+            </ul>
+        </div>
+
+        <div id="sequenceSlotsTargetContainer">
+            <h2>Correct Code Sequence</h2>
+
+            <div class="sequence-section">
+                <h3 class="section-label">&lt;-- Sketch Start / Global --&gt;</h3>
+                <div class="drop-zone-wrapper">
+                    <span class="slot-number">1.</span>
+                    <ul id="slot1" class="drop-zone" data-expected-concept-id="c1"></ul>
+                </div>
+                <div class="drop-zone-wrapper">
+                    <span class="slot-number">2.</span>
+                    <ul id="slot2" class="drop-zone" data-expected-concept-id="c2"></ul>
+                </div>
+            </div>
+
+            <div class="sequence-section">
+                <h3 class="section-label">&lt;-- Setup Function (void setup()) --&gt;</h3>
+                 <div class="drop-zone-wrapper">
+                    <span class="slot-number">3.</span>
+                    <ul id="slot3" class="drop-zone" data-expected-concept-id="c3"></ul>
+                </div>
+            </div>
+
+            <div class="sequence-section">
+                <h3 class="section-label">&lt;-- Loop Function (void loop()) --&gt;</h3>
+                <div class="drop-zone-wrapper">
+                    <span class="slot-number">4.</span>
+                    <ul id="slot4" class="drop-zone" data-expected-concept-id="c4"></ul>
+                </div>
+                <div class="drop-zone-wrapper">
+                    <span class="slot-number">5.</span>
+                    <ul id="slot5" class="drop-zone" data-expected-concept-id="c5"></ul>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="checkSequenceButton">Check My Sequence</button>
+                <button id="resetQuizButton">Reset Quiz</button>
+            </div>
+            <div id="feedbackArea">
+                </div>
+        </div>
+    </div>
+
+    <script src="sequencer_script.js"></script>
+</body>
+</html>

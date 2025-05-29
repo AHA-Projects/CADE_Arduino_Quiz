@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 { text-align: center; }
+p { text-align: center; margin-bottom: 20px; }
+
+#quizContainer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#conceptsSourceContainer, #sequenceSlotsTargetContainer {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#conceptsSourceContainer {
+    width: 35%; /* Adjust as needed */
+    background-color: #eef;
+}
+
+#sequenceSlotsTargetContainer {
+    width: 60%; /* Adjust as needed */
+    background-color: #efe;
+}
+
+#draggableConceptsList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#draggableConceptsList li {
+    background-color: #d8e2ef; /* Light blue for draggable items */
+    border: 1px solid #9cb3d1;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: grab;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sequence-section {
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px dashed #b0c4de; /* LightSteelBlue */
+    border-radius: 5px;
+    background-color: #f8faff;
+}
+
+.section-label {
+    font-size: 1em; /* Adjusted for a less prominent look */
+    color: #0056b3; /* Darker blue */
+    margin-top: 0;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.drop-zone-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #fff; /* White background for each slot line */
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+.slot-number {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #555;
+    min-width: 20px; /* Ensure numbers align well */
+}
+
+.drop-zone { /* This is the UL where items are dropped */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    min-height: 45px; /* Roughly height of one draggable item */
+    width: 100%;
+    background-color: #e9ecef; /* Light gray for empty slot */
+    border: 2px dashed #adb5bd; /* Dashed border for empty slot */
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, border-color 0.2s; /* Smooth transition for hover */
+}
+
+.drop-zone.over { /* Class added when dragging over a valid drop zone */
+    border-color: #007bff; /* Blue border on hover */
+    background-color: #cfe2ff; /* Lighter blue background on hover */
+}
+
+.drop-zone li { /* Style for the LI when it's inside a drop zone */
+    width: calc(100% - 10px); /* Fit nicely within the drop zone */
+    margin: 0; /* Remove margin inherited from source list */
+    padding: 10px; /* Keep padding consistent */
+    background-color: #d1e7dd; /* Greenish when correctly placed (example, JS will control) */
+    border: 1px solid #a3cfbb;
+    cursor: default; /* No longer grab when dropped */
+    text-align: center;
+}
+
+.action-buttons {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.action-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.2s;
+}
+.action-buttons button:hover {
+    background-color: #0056b3;
+}
+#resetQuizButton {
+    background-color: #6c757d; /* Gray for reset */
+}
+#resetQuizButton:hover {
+    background-color: #545b62;
+}
+
+
+#feedbackArea {
+    margin-top: 20px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    background-color: #ffffe0; /* Light yellow for feedback */
+    min-height: 40px;
+    border-radius: 4px;
+    line-height: 1.5;
+}
+
+#feedbackArea ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+#feedbackArea li.correct-feedback { color: green; font-weight: bold; }
+#feedbackArea li.incorrect-feedback { color: red; font-weight: bold; }
+#feedbackArea li.empty-feedback { color: orange; }
+
+
+/* CSS classes for validation states on drop zones */
+.drop-zone.correct-slot {
+    background-color: #d4edda; /* Green for correct */
+    border-color: #c3e6cb;
+}
+.drop-zone.incorrect-slot {
+    background-color: #f8d7da; /* Red for incorrect */
+    border-color: #f5c6cb;
+}
+.drop-zone.correct-slot li, .drop-zone.incorrect-slot li {
+    background-color: transparent; /* Let the UL background show through */
+    border-color: transparent;
+}

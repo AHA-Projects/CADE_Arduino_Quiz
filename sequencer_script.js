@@ -16,19 +16,19 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             id: "c3",
-            text: "Initialize Hardware & Settings (in setup)",
+            text: "Initialize Hardware & Settings",
             correctFeedback: "Excellent! The setup() function is where you initialize pin modes, start serial communication, and prepare hardware. This code runs only once when the Arduino starts.",
             incorrectHint: "Hint: One-time hardware initializations (like setting pin modes or starting Serial communication) belong inside the setup() function."
         },
         {
             id: "c4",
-            text: "Read Inputs & Sensors (in loop)",
+            text: "Read Inputs & Sensors",
             correctFeedback: "Spot on! The loop() function is where you continuously read changing inputs like sensor data or check for button presses.",
             incorrectHint: "Hint: Tasks that need to happen repeatedly, like reading sensor values, are placed inside the main loop()."
         },
         {
             id: "c5",
-            text: "Control Outputs & Logic (in loop)",
+            text: "Control Outputs & Logic",
             correctFeedback: "Perfect! Based on the inputs read and your program's logic, controlling outputs (like LEDs or motors) and making decisions happens continuously in the loop().",
             incorrectHint: "Hint: The core logic of your program, including making decisions based on inputs and controlling outputs, resides in the loop() and runs repeatedly."
         }

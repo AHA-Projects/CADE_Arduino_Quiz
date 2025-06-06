@@ -18,7 +18,10 @@
                 <li id="item-c2" data-concept-id="c2" draggable="true">Define Global Variables & Constants</li>
                 <li id="item-c3" data-concept-id="c3" draggable="true">Initialize Hardware & Settings</li>
                 <li id="item-c4" data-concept-id="c4" draggable="true">Read Inputs & Sensors</li>
-                <li id="item-c5" data-concept-id="c5" draggable="true">Control Outputs & Logic</li>
+                <!-- <li id="item-c5" data-concept-id="c5" draggable="true">Control Outputs & Logic</li> -->
+                <li id="item-c5" data-concept-id="c6" draggable="true">Sending Data to EDGE AI model</li>
+                <li id="item-c6" data-concept-id="c7" draggable="true">Include EDGE AI library</li>
+                <li id="item-c7" data-concept-id="c8" draggable="true">Get Decision from EDGE AI model</li>
             </ul>
         </div>
 
@@ -33,6 +36,10 @@
                 </div>
                 <div class="drop-zone-wrapper">
                     <span class="slot-number">2.</span>
+                    <ul id="slot1" class="drop-zone" data-expected-concept-id="c6"></ul>
+                </div>
+                <div class="drop-zone-wrapper">
+                    <span class="slot-number">3.</span>
                     <ul id="slot2" class="drop-zone" data-expected-concept-id="c2"></ul>
                 </div>
             </div>
@@ -40,7 +47,7 @@
             <div class="sequence-section">
                 <h3 class="section-label">SETUP FUNCTION</h3>
                  <div class="drop-zone-wrapper">
-                    <span class="slot-number">3.</span>
+                    <span class="slot-number">4.</span>
                     <ul id="slot3" class="drop-zone" data-expected-concept-id="c3"></ul>
                 </div>
             </div>
@@ -48,18 +55,26 @@
             <div class="sequence-section">
                 <h3 class="section-label">RUN FOREVER (LOOP) </h3>
                 <div class="drop-zone-wrapper">
-                    <span class="slot-number">4.</span>
+                    <span class="slot-number">5.</span>
                     <ul id="slot4" class="drop-zone" data-expected-concept-id="c4"></ul>
                 </div>
-                <div class="drop-zone-wrapper">
+                <!-- <div class="drop-zone-wrapper">
                     <span class="slot-number">5.</span>
                     <ul id="slot5" class="drop-zone" data-expected-concept-id="c5"></ul>
+                </div> -->
+                <div class="drop-zone-wrapper">
+                    <span class="slot-number">6.</span>
+                    <ul id="slot5" class="drop-zone" data-expected-concept-id="c5"></ul>
+                </div>
+                <div class="drop-zone-wrapper">
+                    <span class="slot-number">7.</span>
+                    <ul id="slot5" class="drop-zone" data-expected-concept-id="c7"></ul>
                 </div>
             </div>
 
             <div class="action-buttons">
                 <button id="checkSequenceButton">Check My Sequence</button>
-                <button id="resetQuizButton">Reset Quiz</button>
+                <button id="resetQuizButton">Reset Sequence</button>
             </div>
             <div id="feedbackArea">
                 </div>

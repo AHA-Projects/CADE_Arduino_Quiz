@@ -26,11 +26,30 @@ document.addEventListener('DOMContentLoaded', () => {
             correctFeedback: "Spot on! The loop() function is where you continuously read changing inputs like sensor data or check for button presses.",
             incorrectHint: "Hint: Tasks that need to happen repeatedly, like reading sensor values, are placed inside the main loop()."
         },
+        // {
+        //     id: "c5",
+        //     text: "Control Outputs & Logic",
+        //     correctFeedback: "Perfect! Based on the inputs read and your program's logic, controlling outputs (like LEDs or motors) and making decisions happens continuously in the loop().",
+        //     incorrectHint: "Hint: The core logic of your program, including making decisions based on inputs and controlling outputs, resides in the loop() and runs repeatedly."
+        // },
         {
             id: "c5",
-            text: "Control Outputs & Logic",
-            correctFeedback: "Perfect! Based on the inputs read and your program's logic, controlling outputs (like LEDs or motors) and making decisions happens continuously in the loop().",
-            incorrectHint: "Hint: The core logic of your program, including making decisions based on inputs and controlling outputs, resides in the loop() and runs repeatedly."
+            text: "Sending Data to EDGE AI model",
+            correctFeedback: "Perfect! Based on the inputs read by the sensor, you can send data to the EDGE AI model for processing.",
+            incorrectHint: "Hint: The core logic of your program, including making inferences based on inputs using the EDGE AI model, resides in the loop() and runs repeatedly."
+        },
+        {
+            id: "c6",
+            text: "Include EDGE AI library",
+            correctFeedback: "Perfect! Including the EDGE AI library at the beginning of your sketch allows you to use its functions and classes throughout your program.",
+            incorrectHint: "Hint: The EDGE AI library should be included at the start of your sketch, before any other code, to make its features available."
+        },
+
+        {
+            id: "c7",
+            text: "Get Decision from EDGE AI model",
+            correctFeedback: "Perfect! After sending data to the EDGE AI model, you can retrieve the decision made by the model.",
+            incorrectHint: "Hint: After sending data to the EDGE AI model, you can retrieve the decision made by the model in the loop() function."
         }
     ];
 
